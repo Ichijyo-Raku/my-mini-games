@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>血蝠死斗机制练习器</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="play">
+      <header class="topbar">
+        <div><p class="eyebrow">M9S Mechanic Trainer</p><h1>血蝠死斗</h1></div>
+        <div class="status-grid">
+          <div><span>阶段</span><strong id="phaseText">待开始</strong></div>
+          <div><span>时间</span><strong id="timeText">0.0s</strong></div>
+          <div><span>种子</span><strong id="seedText">-</strong></div>
+        </div>
+      </header>
+      <div class="arena-wrap">
+        <canvas id="arena" width="1200" height="1200" aria-label="血蝠死斗练习场"></canvas>
+        <div class="result-panel hidden" id="resultPanel">
+          <p id="resultKicker">失败</p><h2 id="resultTitle">机制失败</h2><span id="resultReason">原因</span><button type="button" id="resultRestart">重开</button>
+        </div>
+      </div>
+    </section>
+    <aside class="side">
+      <div class="panel controls"><button type="button" id="startBtn">开始练习</button><button type="button" id="restartBtn">重新随机</button><button type="button" id="pauseBtn">暂停</button></div>
+      <div class="panel settings">
+        <label><span>辅助显示</span><input type="checkbox" id="assistToggle" checked /></label>
+        <label><span>慢速练习</span><input type="checkbox" id="slowToggle" /></label>
+        <label><span>固定塔位</span><select id="towerSelect"><option value="random">随机</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></label>
+        <label><span>蝙蝠 AoE</span><select id="aoeSelect"><option value="random">随机</option><option value="iron">钢铁</option><option value="donut">月环</option></select></label>
+      </div>
+      <div class="panel readout">
+        <div><span>塔位</span><strong id="towerText">-</strong></div><div><span>旋转</span><strong id="directionText">-</strong></div><div><span>蝙蝠</span><strong id="aoeText">-</strong></div><div><span>连线</span><strong id="linkText">-</strong></div>
+      </div>
+    </aside>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
