@@ -19,7 +19,7 @@ my-mini-games/
 
 直接打开根目录 `index.html` 可以进入小游戏合集首页。
 
-第一款游戏也可以直接打开 `game-1/index.html`。游戏会加载 `game-1/assets/M9S-MAP.jpg` 作为场地底图，并使用 `game-1/assets/M9S-BOSS.jpg` 作为 Boss 贴图。
+第一款游戏也可以直接打开 `game-1/index.html`。游戏会加载 `game-1/assets/M9S-MAP.png` 作为场地底图，并使用 `game-1/assets/M9S-BOSS.png` 作为 Boss 贴图。
 
 ## 第一款游戏操作
 
