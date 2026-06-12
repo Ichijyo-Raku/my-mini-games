@@ -1,6 +1,6 @@
 const c=document.querySelector('#arena'),x=c.getContext('2d');
 const $=s=>document.querySelector(s),ui={phase:$('#phaseText'),time:$('#timeText'),seed:$('#seedText'),tower:$('#towerText'),dir:$('#directionText'),aoe:$('#aoeText'),link:$('#linkText'),start:$('#startBtn'),restart:$('#restartBtn'),pause:$('#pauseBtn'),assist:$('#assistToggle'),slow:$('#slowToggle'),towerSel:$('#towerSelect'),aoeSel:$('#aoeSelect'),panel:$('#resultPanel'),rk:$('#resultKicker'),rt:$('#resultTitle'),rr:$('#resultReason'),rp:$('#resultRestart')};
-const map=new Image(),boss=new Image();map.src='./assets/M9S-MAP.jpg';boss.src='./assets/M9S-BOSS.jpg';
+const map=new Image(),boss=new Image();map.src='./assets/M9S-MAP.png';boss.src='./assets/M9S-BOSS.png';
 const cfg={inset:.166,size:.668,center:{x:2,y:2},tower:{A:{x:2,y:1,e:{x:2,y:0}},B:{x:3,y:2,e:{x:4,y:2}},C:{x:2,y:3,e:{x:2,y:4}},D:{x:1,y:2,e:{x:0,y:2}}},towerR:.38,playerR:.075,bossH:1.25,batR:.11,linkMax:1.5,waveDeg:22.5,batIron:.75,donutIn:.5,donutOut:2,bossIron:1,speed:1.28,waveHits:[10,13,16,19,22]};
 const keys=new Set();let last=performance.now(),g=idle();
 function idle(){return{status:'idle',paused:false,seed:0,t:0,phase:'待开始',tower:'A',dir:1,aoe:'iron',p:{x:2,y:3.35},bat:null,waves:new Set(),towerChecked:false,finalChecked:false}}
